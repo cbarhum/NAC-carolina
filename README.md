@@ -52,6 +52,26 @@ Após o deploy teste a aplicação acessando a URL da aplicação;
 
 ## Etapa 2 - Integração entre a App e o Travis CI
 
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-03.png)
+
+**Objetivo:** Testar a integração entre o repositório de código e o travis
+
+Para configurar o processo de integração o Travis utiliza como base uma linaguagem declarativa, neste caso é criado um arquivo .travis.yml na raiz do projeto no Git, essa estrutura pode ser conferida com base na [documentação do CI para javaScript/nodejs](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/);
+
+O arquivo necessário para esta integração já existe e possui o formato abaixo:
+
+```sh
+language: node_js
+node_js:
+- stable
+deploy:
+  provider: heroku
+  api_key:
+    secure: 'KEY'
+  on:
+    all_branches: true
+```
+
 ## Etapa 3 - Finalizando o processo de Integração
 
 ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/logo-lab.png)
