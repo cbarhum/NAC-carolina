@@ -15,13 +15,8 @@ Para a execução deste laboratório os seguinte requisitos devem ser verificado
 1. Acesso na plataforma [github](https://github.com);
 2. Acesso na plataforma [heroku](https://www.heroku.com/);
 3. Acesso na plataforma [travis](http://travis-ci.org);*
-4. Instalação do [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli);**
-5. Instalação do [Travis Cli](https://github.com/travis-ci/travis.rb);**
-
-*  Para este acesso é possível executar login utlizando a conta no Github;
-** Os clientes de linha de comando do Heroku e Travis serão disponibilizados em um host para execução do exercício;
-
----
+4. Instalação do [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli) (Para este acesso é possível executar login utlizando a conta no Github);
+5. Instalação do [Travis Cli](https://github.com/travis-ci/travis.rb); (Os clientes de linha de comando do Heroku e Travis serão disponibilizados em um host para execução do exercício);
 
 ## Etapa 1 - Entrega da aplicação utilizando o Heroku Cli
 
@@ -58,4 +53,4 @@ Neste processo o Heroku receberá um push com o código base da aplicação, com
 
 Após o deploy teste a aplicação acessando a URL da aplicação;
 
----
+## Etapa 2 - Integração entre a App e o Travis CI
