@@ -1,9 +1,6 @@
 # NAC10CICD
 Laboratório com teste de aplicação node utilizando a integração Git + Travis + Heroku
 
-![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/logo-lab.png)
-
-
 > Neste laboratório executaremos a construção do exercício anterior: Uma aplicação node utilizando repositório Git utilizará o Travis como CI para execução de um teste funcional, este teste será utilizado como "triger" para o delivery da aplicação utilizando a plataforma PAAS Heroku.
 
 ---
@@ -54,3 +51,7 @@ Neste processo o Heroku receberá um push com o código base da aplicação, com
 Após o deploy teste a aplicação acessando a URL da aplicação;
 
 ## Etapa 2 - Integração entre a App e o Travis CI
+
+## Etapa 3 - Finalizando o processo de Integração
+
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/logo-lab.png)
