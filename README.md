@@ -80,10 +80,44 @@ deploy:
 
 ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-05.png)
 
-4. Volte a opção dashboard e procure pelo projeto NAC10CICD, utilize a opção "Trigger a build" para validar a comunicação entre o CI e o repositório:
+4. Volte a opção dashboard e procure pelo projeto NAC10CICD, utilize a opção "Trigger a build" para validar a comunicação entre o CI e o repositório **Nesta etapa o processo de deploy da aplicação deverá falhar pois o CI ainda não possui as credenciais de acesso a app no Heroku.
 
 ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-06.png)
 
 ## Etapa 3 - Finalizando o processo de Integração
 
 ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/logo-lab.png)
+
+> O arquivo de script build .travis.yml é responsável pela integração ente o CI e o repositório, neste ponto a ultima etapa do lab é vincular o "aceite de alterações executadas no CI ao processo de deploy no Heroku"
+
+1. Para configurar esta etapa da integração será necessário utilizar o cliente do travis para encryptar a token de acesso ao Heroku, no terminal onde os clientes foram instalados faça login no heroku e em seguida execute:
+
+```sh
+heroku login -i
+heroku auth:token
+```
+
+O comando a seguir executará o mesmo procedimento acima na instrução entre parênteses para em seguida gravar a informação do token obtido na configuração do travis aruivo ".travis.yml":
+
+```sh
+travis encrypt $(heroku auth:token) --add deploy.api_key
+```
+
+Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada;
+
+2. Após a instalação o ultimo processo refere-se a configuração da app para verificar automaticamente o repositório git:
+
+  A partir do painel de controle do Heroku na opção Dashboard identifique a App que criamos, navegue até o menu "Deployment method" e escolha a opção "Github":
+
+  ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-07.png)
+
+3. No campo "Connect to GitHub" localize o seu repositório para estabelecer a conexão;
+
+4. Marque a opção "Wait for CI to pass before deploy" e habilite o deploy automático utilizando a opção "Enable Automatic Deploys";
+
+  ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-08.png)
+
+5. Finalizando o processo execute um novo commit na branch master, de prefêrencia alterando o texto entregue no arquivo index.js e acompanhe em seguida o processo de validação da alteração pelo travis e o deploy da nova versão no Heroku.
+
+---
+
