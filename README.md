@@ -5,6 +5,12 @@ Laboratório com teste de aplicação node utilizando a integração Git + Travi
 
 ---
 
+Exercício baseado neste Laboratório: [https://pt.surveymonkey.com/r/KKQH899](https://pt.surveymonkey.com/r/KKQH899);
+
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/QR_code_KKQH899.png)
+
+---
+
 ## Pré-requisitos
 
 Para a execução deste laboratório os seguinte requisitos devem ser verificados;
@@ -102,6 +108,8 @@ O comando a seguir executará o mesmo procedimento acima na instrução entre pa
 ```sh
 travis encrypt $(heroku auth:token) --add deploy.api_key
 ```
+
+Esse formato está documentado da página do travis referente a deploy usando Heroku: [https://docs.travis-ci.com/user/deployment/heroku/](https://docs.travis-ci.com/user/deployment/heroku/);
 
 Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada;
 
