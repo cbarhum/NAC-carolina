@@ -3,6 +3,7 @@ node_js:
   - stable
 deploy:
   provider: heroku
-  api_key: "AUTH_TOKEN"
+  api_key:
+    secure: 'KEY'
   on:
     all_branches: true
