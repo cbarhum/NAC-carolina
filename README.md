@@ -11,9 +11,8 @@ Para a execução deste laboratório os seguinte requisitos devem ser verificado
 
 1. Acesso na plataforma [github](https://github.com);
 2. Acesso na plataforma [heroku](https://www.heroku.com/);
-3. Acesso na plataforma [travis](http://travis-ci.org);*
-4. Instalação do [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli) (Para este acesso é possível executar login utlizando a conta no Github);
-5. Instalação do [Travis Cli](https://github.com/travis-ci/travis.rb); (Os clientes de linha de comando do Heroku e Travis serão disponibilizados em um host para execução do exercício);
+3. Acesso na plataforma [travis](http://travis-ci.com) (Para este acesso é possível executar login utlizando a conta no Github);
+4. Instalação do [Heroku Cli](https://devcenter.heroku.com/articles/heroku-cli) 5. Instalação do [Travis Cli](https://github.com/travis-ci/travis.rb);
 
 ## Etapa 1 - Entrega da aplicação utilizando o Heroku Cli
 
@@ -25,7 +24,7 @@ Para a execução deste laboratório os seguinte requisitos devem ser verificado
 
 2. Após o Fork clone o repositório localmente no mesmo host onde o Heroku Cli está instalado;
 
-3. A partir do diretório do projeto que acabou de clonar, faça login no Heroku e utilize a sequência abaixo para criar uma app:
+3. A partir do diretório do projeto faça login no Heroku e utilize a sequência abaixo para criar uma app:
 
 ```sh
 heroku login -i
@@ -71,6 +70,18 @@ deploy:
   on:
     all_branches: true
 ```
+
+1. Faça um acesso na página do Travis pelo endereço: [https://travis-ci.org/](https://travis-ci.org/), utilize suas credenciais do Github na opção "Sign in with Github";
+
+2. Após o login no menu no canto superior esquerdo da tela acese a opção Settings:
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-04.png)
+
+
+3. O modelo de integração que usaremos será através de webhooks "Legacy Services Integration", localize o repositório referente ao seu Fork do projeto e habilite a integração usando o "switch buttom no canto direito da tela":
+
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-05.png)
+
+4. Volte a opção dashboard e procure pelo projeto NAC10CICD, utilize a opção "Trigger a build" para validar a comunicação entre o CI e o repositório. 
 
 ## Etapa 3 - Finalizando o processo de Integração
 
