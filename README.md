@@ -41,9 +41,8 @@ heroku create
 git push heroku master
 ```
 
-Neste processo o Heroku receberá um push com o código base da aplicação, como não houve uma declaração direta da linguagem de programação a plataforma tentará inferir a linguagem com base nos commits executados no repositório master e o processo de deploy deverá ocorrer como esperado:
+Neste processo o Heroku receberá um push com o código base da aplicação, como não houve uma declaração direta da linguagem de programação a plataforma tentará inferir a linguagem com base nos commits executados no repositório master e o processo de deploy deverá ocorrer como esperado;
 
-![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-02.png)
 
 > No caso do node por exemplo, essa inferência da linguagem de programação em uso ocorre devido a estrutura do package.json com pacotes NPM, se você enviasse um aplicativo escrito em PHP com um composer.json essa app seria provavelmente identificada como uma app escrita em PHP. Segundo na documentação oficial da plataforma disponível no endereço https://devcenter.heroku.com/articles/buildpacks essa identificação ocorre no primeiro envio devido a ordem na qual os buildpacks são chamados para detecção.
 
@@ -62,7 +61,7 @@ O arquivo necessário para esta integração já existe e possui o formato abaix
 ```sh
 language: node_js
 node_js:
-- stable
+  - "10"
 deploy:
   provider: heroku
   api_key:
@@ -81,7 +80,9 @@ deploy:
 
 ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-05.png)
 
-4. Volte a opção dashboard e procure pelo projeto NAC10CICD, utilize a opção "Trigger a build" para validar a comunicação entre o CI e o repositório. 
+4. Volte a opção dashboard e procure pelo projeto NAC10CICD, utilize a opção "Trigger a build" para validar a comunicação entre o CI e o repositório:
+
+![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-06.png)
 
 ## Etapa 3 - Finalizando o processo de Integração
 
