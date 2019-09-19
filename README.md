@@ -111,7 +111,7 @@ travis encrypt $(heroku auth:token) --add deploy.api_key
 
 Esse formato está documentado da página do travis referente a deploy usando Heroku: [https://docs.travis-ci.com/user/deployment/heroku/](https://docs.travis-ci.com/user/deployment/heroku/);
 
-Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada;
+Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada **faça o commit desta auteração** ela será necessária para que o ci consiga autenticar e executar o deploy da aplicação;
 
 2. Após a instalação o ultimo processo refere-se a configuração da app para verificar automaticamente o repositório git:
 
