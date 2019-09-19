@@ -26,7 +26,7 @@ Para a execução deste laboratório os seguinte requisitos devem ser verificado
 
 **Objetivo:** Testar a aplicação usando o Heroku (será necessário criar a app antes na plataforma).
 
-1. Faça login no github e execute um fork [deste repositório](https://github.com/fiapsecdevops/NAC10CICD-APP) ele possui a base de código necessária para testar o funcionamento da aplicação e sua entrega de forma direta ou utilizando encapsulamento em containers (repositórios utilizados em aulas anteriores podem ser removidos);
+1. Faça login no github e execute um fork [deste repositório](https://github.com/fiapsecdevops/NAC10CICD) ele possui a base de código necessária para testar o funcionamento da aplicação e sua entrega de forma direta ou utilizando encapsulamento em containers (repositórios utilizados em aulas anteriores podem ser removidos);
 
 2. Após o Fork clone o repositório localmente no mesmo host onde o Heroku Cli está instalado;
 
