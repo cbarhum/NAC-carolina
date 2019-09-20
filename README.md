@@ -112,21 +112,25 @@ travis encrypt $(heroku auth:token) --add deploy.api_key
 
 Esse formato está documentado da página do travis referente a deploy usando Heroku: [https://docs.travis-ci.com/user/deployment/heroku/](https://docs.travis-ci.com/user/deployment/heroku/);
 
-Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada **faça o commit desta auteração** ela será necessária para que o ci consiga autenticar e executar o deploy da aplicação;
+Ao final do processo verifique novamente o arquivo .travis.yml, ele possuirá a nova chave criptografada;
 
-2. Após a instalação o ultimo processo refere-se a configuração da app para verificar automaticamente o repositório git:
+2. Para finalizar o processo altere o nome da App no arquivo .travis.yml, localize o campo app: 'NAME_HEROKU_APP' e modifique o valor de acordo com o nome da aplicação criada no Heroku;
+
+3. **faça o commit das duas auterações executadas** elas serão necessárias para que o ci consiga autenticar e executar o deploy da aplicação;
+
+4. Após a instalação o ultimo processo refere-se a configuração da app para verificar automaticamente o repositório git:
 
   A partir do painel de controle do Heroku na opção Dashboard identifique a App que criamos, navegue até o menu "Deployment method" e escolha a opção "Github":
 
   ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-07.png)
 
-3. No campo "Connect to GitHub" localize o seu repositório para estabelecer a conexão;
+5. No campo "Connect to GitHub" localize o seu repositório para estabelecer a conexão;
 
-4. Marque a opção "Wait for CI to pass before deploy" e habilite o deploy automático utilizando a opção "Enable Automatic Deploys";
+6. Marque a opção "Wait for CI to pass before deploy" e habilite o deploy automático utilizando a opção "Enable Automatic Deploys";
 
   ![alt tag](https://github.com/fiapsecdevops/NAC10CICD/raw/master/images/lab-step-08.png)
 
-5. Finalizando o processo execute um novo commit na branch master, de prefêrencia alterando o texto entregue 
+7. Finalizando o processo execute um novo commit na branch master, de prefêrencia alterando o texto entregue 
 quivo index.js e acompanhe em seguida o processo de validação da alteração pelo travis e o deploy da nova versão no Heroku.
 
 ---
