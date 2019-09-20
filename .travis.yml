@@ -3,6 +3,7 @@ node_js:
   - stable
 deploy:
   provider: heroku
+  app: 'NAME_HEROKU_APP'
   api_key:
     secure: 'KEY'
   on:
