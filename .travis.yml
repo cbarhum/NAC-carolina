@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - stable
+- stable
 deploy:
   provider: heroku
-  app: 'NAME_HEROKU_APP'
+  app: fathomless-island-55939
   api_key:
-    secure: 'KEY'
+    secure: h2QMq6ALIPZzx1dtNb9uKOfHUUwVXOoYlgutBlTafUHozpteAFtMDyRv2HkSStLydY9pPedraewatef4b+V566pHJ6knROcMr5qAlVMoRbSjjo0icMLyehc3K7DdNQsm8sv2WMNvHOZ2ZbT05wgzZ19a9j2HG27QYCP3mpmD46Wf2urbj8fcpGx3citwGD0EQlNuFRb1SFUTtVkg/RouWSXJ+KzMRXqNqkkBbtuUgc8Mp4VfcrgtzUhC6mbROgJwVr1Ag+Wcru7wvYTZROsUzfXR91BLkOUP9Lb2pH2W9NVHVtRaPOp02N5e2YBIKXHGs3bS6IhvpGlJrBXgdJaoNE9Bzqj0uYf0/+k8bcSCZbR1VsphdKm//l7lb00XzBhAP7xNBGl9Dzk8RCoMan6P+3RpAD5aDBq2yLW7y39SgszKuQ6y2DHybKhUgVZZ9OxWFNNPvDE2lfwcDCPbCUdBeG1omH2xGb7XPGlCa89c/i6+Q10ex8i1/JwMpVtDqj4jVOUMSqAGnrgvRfUsuAPEAZK/+5MLQQAe1JXywyYdDoKo1BMpolwOlLAPrVAEol5M2U2m9qgFl9eXMMo5eCSgt086+UwMrqda9Tf1vEJma7U0n0JZM0w7iSeJUIs9gp32yYxxsE7Y12oZJ6gApBbo0sV8bgYUxaoFYF5AoswBSa0=
   on:
     all_branches: true
